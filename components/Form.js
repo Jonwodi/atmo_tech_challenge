@@ -8,12 +8,14 @@ export default function Form() {
       type: "text",
       placeholder: "Enter your name",
       text: "Name *",
+      id: "3",
     },
     {
       nameId: "email",
       type: "email",
       placeholder: "Enter your email address",
       text: "Email *",
+      id: "4",
     },
   ];
 
@@ -24,9 +26,12 @@ export default function Form() {
       method="post"
       className="flex flex-col flex-wrap sm:items-start smUp:items-center gap-y-10 max-w-full sm:text-left smUp:text-center">
       {formSettings.map((settings) => (
-        <label for={settings.nameId} form="registration">
-          <p className="text-[#1A75BC]">{settings.text}</p>
+        <label key={settings.id} htmFor={settings.nameId} form="registration">
+          <p key={settings.id} className="text-[#1A75BC]">
+            {settings.text}
+          </p>
           <input
+            key={settings.id}
             id={settings.nameId}
             type={settings.type}
             name={settings.nameId}
@@ -37,7 +42,7 @@ export default function Form() {
           />
         </label>
       ))}
-      <label for="image" form="registration">
+      <label htmlFor="image" form="registration">
         <p className="text-[#1A75BC]">Upload your image *</p>
         <input
           id="image"
