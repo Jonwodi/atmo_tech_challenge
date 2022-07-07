@@ -56,9 +56,19 @@ export default function PublicApi() {
   fetchData();
 
   return (
-    <div>
-      <p>Sensor1 mean PM10 value: {sensor1}</p>
-      <p>Sensor2 mean PM10 value: {sensor2}</p>
+    <div className="flex flex-col flex-wrap sm:items-start smUp:items-center mt-20 max-w-full sm:pl-20 smUp:pl-0 sm:text-left smUp:text-center">
+      <p>
+        Sensor1 mean PM10 value:{" "}
+        <span className="text-[#1A75BC]">{sensor1}</span>
+      </p>
+      <p>
+        Sensor2 mean PM10 value:{" "}
+        <span className="text-[#1A75BC]">{sensor2}</span>
+      </p>
+      <p>
+        Sensor 2's 1 hour mean PM10 value is higher than Sensor 1's 1 hour mean
+        PM10 value{" "}
+      </p>
     </div>
   );
 }
