@@ -6,14 +6,14 @@ export default function Navbar() {
   const router = useRouter();
 
   const routes = [
-    { name: "Form", link: "/" },
-    { name: "Sensors", link: "/sensors" },
+    { name: "Form", link: "/", id: "1" },
+    { name: "Sensors", link: "/sensors", id: "2" },
   ]; // navigation tab link settings
 
   return (
     <div className="flex flex-row flex-wrap sm:justify-start smUp:justify-center gap-10 pt-5 sm:pl-20 smUp:pl-0">
       {routes.map((route) => (
-        <Link href={route.link}>
+        <Link key={route.id} href={route.link}>
           <a
             className={`text-xl ${
               router.pathname == `${route.link}`
