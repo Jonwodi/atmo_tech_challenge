@@ -26,10 +26,8 @@ export default function Form() {
       method="post"
       className="flex flex-col flex-wrap sm:items-start smUp:items-center gap-y-10 max-w-full sm:text-left smUp:text-center">
       {formSettings.map((settings) => (
-        <label key={settings.id} htmFor={settings.nameId} form="registration">
-          <p key={settings.id} className="text-[#1A75BC]">
-            {settings.text}
-          </p>
+        <label key={settings.id} form="registration">
+          <p className="text-[#1A75BC]">{settings.text}</p>
           <input
             key={settings.id}
             id={settings.nameId}
@@ -42,7 +40,7 @@ export default function Form() {
           />
         </label>
       ))}
-      <label htmlFor="image" form="registration">
+      <label form="registration">
         <p className="text-[#1A75BC]">Upload your image *</p>
         <input
           id="image"
