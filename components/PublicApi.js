@@ -57,10 +57,7 @@ export default function PublicApi() {
 
   return (
     <div className="flex flex-col flex-wrap sm:items-start smUp:items-center mt-20 max-w-full sm:pl-20 smUp:pl-0 sm:text-left smUp:text-center">
-      <p>
-        Sensor1 mean PM10 value:
-        <span className="text-[#1A75BC]">{sensor1}</span>
-      </p>
+      <p>Sensor1 mean PM10 value: {sensor1}</p>
       <p>
         Sensor2 mean PM10 value:
         <span className="text-[#1A75BC]">{sensor2}</span>
